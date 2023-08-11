@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-deploy
+  name: nginx-deploy
+  namespace: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-pod
+  template:
+    metadata:
+      labels:
+        app: nginx-pod
+      namespace: hello-world
+    spec:
+      containers:
+		# 镜像名称
+      - image: nginx:v1.0.0
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources: {}
