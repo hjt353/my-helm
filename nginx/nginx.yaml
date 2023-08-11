@@ -17,7 +17,6 @@ spec:
       namespace: hello-world
     spec:
       containers:
-		# 镜像名称
       - image: nginx:v1.0.0
         name: nginx
         ports:
