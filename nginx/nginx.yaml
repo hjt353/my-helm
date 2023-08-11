@@ -17,7 +17,7 @@ spec:
       namespace: hello-world
     spec:
       containers:
-      - image: nginx
+      - image: nginx:latest
         name: nginx
         ports:
         - containerPort: 80
